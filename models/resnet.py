@@ -206,9 +206,7 @@ def load_imagenet_weights(model: ConditionalResNet) -> None:
             if conditional_block.downsample is not None:
                 conditional_block.downsample[0].weight.data = pretrained_block.downsample[0].weight.data
     
-    # 复制最后的全连接层权重
-    # model.fc.weight.data = pretrained_model.fc.weight.data
-    # model.fc.bias.data = pretrained_model.fc.bias.data
+
 
 
 class ResNetWSLConfig(PretrainedConfig):
